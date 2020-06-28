@@ -1,5 +1,3 @@
--- Drop and recreate Users table (Example)
-
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -8,19 +6,5 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL
 );
 
-DROP TABLE IF EXISTS categories CASCADE;
-CREATE TABLE categories (
-  id SERIAL PRIMARY KEY NOT NULL,
-  type VARCHAR(255) NOT NULL
-);
-
-DROP TABLE IF EXISTS list CASCADE;
-CREATE TABLE list (
-  id SERIAL PRIMARY KEY NOT NULL,
-  task_description VARCHAR(255) NOT NULL,
-  completed BOOLEAN NOT NULL DEFAULT FALSE,
-  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE
-);
 
 
