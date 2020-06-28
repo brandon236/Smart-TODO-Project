@@ -52,6 +52,16 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+db.query(`
+SELECT * FROM users;
+  `)
+.then(res => {
+  res.rows.forEach(row => {
+    console.log(`${row.cohort}: ${row.teacher}`);
+  })
+})
+.catch(err => console.error('query error', err.stack));
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
