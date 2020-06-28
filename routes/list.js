@@ -24,6 +24,17 @@ module.exports = (db) => {
       });
   });
 
+  router.post("/", (req, res) => {
 
-  return router;
+    let query = `INSERT INTO list (task_description) VALUES ($1)`;
+    db.query(query, [req.body.text])
+      .then(() => {})
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
+  });
+ return router;
+
 };

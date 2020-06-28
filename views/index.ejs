@@ -15,11 +15,10 @@
   <body>
 
     <h1>SMART-TODO List</h1>
-    <form action="/list" method="POST">
+    <form action="/api/list" method="POST">
       <p>Please enter your task here</p>
-      <textarea> </textarea>
-      <button type="submit">Submit</button>
+      <textarea class="form__textarea" name="text" id="description-text" ></textarea>
+      <button class="button"  type="submit">Submit</button>
     </form>
-
   </body>
 </html>
