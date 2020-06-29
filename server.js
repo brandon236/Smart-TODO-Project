@@ -47,9 +47,6 @@ app.use("/api/categories", categoriesRoutes(db));
 app.use("/api/list", listRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
-// const apiRoutes = require("./routes/apiSearch");
-// app.use("/api/list", apiRoutes(db))
-
 
 // Home page
 // Warning: avoid creating more routes in this file!
