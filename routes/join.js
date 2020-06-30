@@ -10,11 +10,15 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    let query = `SELECT * FROM categories`;
+    let query = `
+    SELECT * FROM list
+    JOIN categories  ON  list.category_id = categories.id
+    JOIN users ON users.id = list.user_id`;
+
     db.query(query)
       .then(data => {
-        const categories = data.rows;
-        res.json({ categories });
+        const join = data.rows;
+        res.json({ join });
       })
       .catch(err => {
         res
