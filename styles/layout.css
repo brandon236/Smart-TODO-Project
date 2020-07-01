@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Playfair+Display");
+body {
+  background-color: #EEE;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 30px;
+}
+body h1 {
+  color: #244751;
+}
+body textarea {
+  border-radius: 5px;
+}
+
+.div_new_task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.submitButton {
+  align-self: flex-end;
+}
+
+.form__textarea {
+  width: 300px;
+  height: 30px;
+}
+
+#task_article {
+  margin: 10px;
+  padding: 5px;
+  width: 300px;
+  border: solid;
+  border-radius: 10px;
+}
+
+.task_element {
+  display: flex;
+}
+
+.icon_button {
+  width: 5px;
+  height: 5px;
+}
+
+.task_element {
+  font-weight: initial;
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  line-height: 5px;
+  border-radius: 50%;
+  /* the magic */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 auto 40px;
+}
+
+.green {
+  background-color: #16a085;
+  display: none;
+}
+
+.red {
+  background-color: #e74c3c;
+}
+
+.delete_button {
+  width: 5px;
+  height: 5px;
+  border: none;
+}
+
+/*# sourceMappingURL=layout.css.map */
