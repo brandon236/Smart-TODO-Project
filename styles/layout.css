@@ -39,44 +39,14 @@ body textarea {
   display: flex;
 }
 
-.icon_button {
-  width: 5px;
-  height: 5px;
+.input_button {
+  width: 15px;
+  height: 15px;
 }
 
 .task_element {
   font-weight: initial;
-}
-
-.circle {
-  width: 5px;
-  height: 5px;
-  line-height: 5px;
-  border-radius: 50%;
-  /* the magic */
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  text-align: center;
-  color: white;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 0 auto 40px;
-}
-
-.green {
-  background-color: #16a085;
-  display: none;
-}
-
-.red {
-  background-color: #e74c3c;
-}
-
-.delete_button {
-  width: 5px;
-  height: 5px;
-  border: none;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=layout.css.map */
