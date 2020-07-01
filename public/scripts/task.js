@@ -32,12 +32,10 @@ $(document).ready(function() {
             </div>
             <div>
             <form  action="/delete" method="POST">
-              <input type="image" id="${element.task_description}" class="input_button delete" src="https://img.icons8.com/color/48/000000/delete-sign.png" alt="Submit">
+              <input type="image" name="${element.task_description}" class="input_button delete" src="https://img.icons8.com/color/48/000000/delete-sign.png" alt="Submit">
             </form>
-
             <input type="image" id="edit_sign" class="input_button" src="https://img.icons8.com/pastel-glyph/64/000000/edit.png" alt="Submit">
             </div>
-
           </div>
 
         `);
@@ -51,7 +49,6 @@ $(document).ready(function() {
     loadTask();
   // this part resposible for getting data from text input
   $("#submit_form").submit(function(event) {
-
     const $form = $("form");
     loadTask();
   });
