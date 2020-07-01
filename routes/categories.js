@@ -11,7 +11,6 @@ const router  = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
     let query = `SELECT * FROM categories`;
-    console.log(query);
     db.query(query)
       .then(data => {
         const categories = data.rows;
