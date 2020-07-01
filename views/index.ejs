@@ -9,16 +9,24 @@
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/task.js"></script>
+    <script type="text/javascript" src="/scripts/deleteButton.js"></script>
+
 
   </head>
-
   <body>
-
+  <div class="div_new_task">
     <h1>SMART-TODO List</h1>
-    <form action="/api/list" method="POST">
+    <form id="submit_form" action="/api/list" method="POST">
       <p>Please enter your task here</p>
       <textarea class="form__textarea" name="text" id="description-text" ></textarea>
-      <button class="button"  type="submit">Submit</button>
+      <div>
+        <button class="submitButton"  type="submit">Submit</button>
+      </div>
     </form>
+    <section class="container" id="container">
+      <article id="task_article"></article>
+    </section>
+  </div>
   </body>
 </html>
