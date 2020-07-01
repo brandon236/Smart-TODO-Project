@@ -48,11 +48,10 @@ $(document).ready(function() {
 
     };
 
-
-
+    loadTask();
   // this part resposible for getting data from text input
   $("#submit_form").submit(function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     const $form = $("form");
     loadTask();
   });
