@@ -8,7 +8,7 @@
 const express = require('express');
 const router  = express.Router();
 const apiSearch = require('../lib/apiSearch');
-const apiSearchNew = require('../lib/apiSearchNew');
+//const apiSearchNew = require('../lib/apiSearchNew');
 
 
 
@@ -28,7 +28,7 @@ module.exports = (db) => {
   });
 
   router.post("/", (req, res) => {
-    apiSearchNew(db, req.body.text);
+    apiSearch(db, req.body.text);
     res.redirect("/");
   });
 
