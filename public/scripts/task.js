@@ -7,17 +7,18 @@ $(document).ready(function() {
         })
     // This then create the edit multiple choices
     .then(function (data)  {
-      $( "#edit_sign" ).click(function(event) {
+      $( ".edit_sign" ).click(function(event) {
         event.preventDefault();
         const $editIcon = $(this);
-        const $editForm = $editIcon.parent( "#edit_form" );
+        const $editForm = $editIcon.parent( ".edit_form" );
         const $divElement = $editForm.parent();
         const $taskElementChild = $divElement.parent("#task_element_child");
         const $taskElement = $taskElementChild.parent(".task_element");
+
         const $taskDescription = $taskElement.find("#p_task_description").html();
 
 
-        $('#edit_form').empty();
+        $('.edit_form').empty();
         const $multipleChoice = `
         <form id="form_multiple_choice" action="/edit" method="post">
         <input type="radio" name="${data.categories[0].type}" value="${$taskDescription}"/> ${data.categories[0].type}
@@ -67,8 +68,8 @@ $(document).ready(function() {
                 <form  action="/delete" method="POST">
                   <input type="image" name="${element.task_description}" class="input_button delete"  src="https:/img.icons8.com/color/48/000000/delete-sign.png" alt="Submit">
                 </form>
-                <form id="edit_form">
-                  <input type="image" name="${element.task_description}" id="edit_sign"   class="input_button"src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"  alt="submit">
+                <form id="edit_form" class= "edit_form">
+                  <input type="image" name="${element.task_description}"  class="input_button edit_sign" src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"  alt="submit">
                 </form>
               </div>
             </div>
