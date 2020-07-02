@@ -31,8 +31,6 @@ module.exports = (db) => {
 
     res.redirect('/');
 
-
-
   });
 
  return router;
