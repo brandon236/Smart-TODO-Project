@@ -10,12 +10,14 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
+    const userName = req.session.user_id;
     let query = `
     SELECT * FROM list
     JOIN categories  ON  list.category_id = categories.id
-    JOIN users ON users.id = list.user_id`;
+    JOIN users ON users.id = list.user_id
+    WHERE list.user_id = (SELECT id FROM users WHERE username = $1)`;
 
-    db.query(query)
+    db.query(query, [userName])
       .then(data => {
         const join = data.rows;
         res.json({ join });

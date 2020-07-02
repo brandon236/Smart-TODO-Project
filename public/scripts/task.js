@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  function loatCategories() {
+  function loadCategories() {
     $.ajax('/api/categories', { method: 'GET' })
         .then(function(data) {
           return data;
@@ -83,7 +83,7 @@ $(document).ready(function() {
         }
       })
       .then (function () {
-        loatCategories();
+        loadCategories();
       })
     };
 

@@ -10,8 +10,6 @@ module.exports = (db) => {
     let taskDescription = req.body[category].toLowerCase();
     taskDescription = taskDescription.slice(1, taskDescription.length -1);
 
-    console.log("taskDescription", taskDescription)
-
     db.query(`
     SELECT id FROM categories WHERE type = '${category}';
     `)
@@ -23,7 +21,7 @@ module.exports = (db) => {
 
       const queryString = `
       UPDATE list SET category_id  = ${categoryID} WHERE task_description = '${taskDescription}';`;
-      console.log(queryString)
+
       db.query(queryString)
       .then(res => res);
     })

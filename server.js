@@ -9,6 +9,8 @@ const bodyParser = require("body-parser");
 const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
+const cookieSession = require('cookie-session');
+
 
 // PG database client/connection setup
 const { Pool } = require('pg');
@@ -32,6 +34,11 @@ app.use("/styles", sass({
   outputStyle: 'expanded'
 }));
 app.use(express.static("public"));
+app.use(cookieSession({
+  name: 'session',
+  keys: [
+    'supersecretstringthatshouldideallybesavednotincode']
+}));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
@@ -55,6 +62,11 @@ app.use("/delete", deleteRoutes(db));
 app.use("/edit", editRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
+app.get('/login/:id', (req, res) => {
+  req.session.user_id = null;
+  req.session.user_id = req.params.id;
+  res.redirect('/');
+});
 
 // Home page
 // Warning: avoid creating more routes in this file!
