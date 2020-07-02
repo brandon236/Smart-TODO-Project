@@ -14,7 +14,6 @@ $(document).ready(function() {
         const $divElement = $editForm.parent();
         const $taskElementChild = $divElement.parent("#task_element_child");
         const $taskElement = $taskElementChild.parent(".task_element");
-
         const $taskDescription = $taskElement.find("#p_task_description").html();
 
 
