@@ -11,8 +11,28 @@ body {
   font-family: $font-stack;
   margin: 30px;
 
+#submit_form {
+  display: none;
+}
+
   h1 {
-    color: #244751;
+    color: #98e9ff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .new-task-button {
+    display:flex;
+    justify-content: center;
+  }
+
+  .header-main {
+    height: 120px;
+    width: 93vw;
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
   }
 
   textarea {
@@ -33,7 +53,6 @@ body {
 }
 
 .form__textarea {
-
   width: 300px;
   height: 30px;
 }
@@ -41,20 +60,69 @@ body {
 
 #task_article {
   margin:10px;
+  margin-left: 10px;
   padding:5px;
-  width:300px;
+  max-width:230vh;
   border:solid;
   border-radius:10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.p_category {
+  font-size: x-large;
+  color: darkred;
+}
+
+.task_element {
+  font-size: medium;
+  color: black;
+}
+
+#icon {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.edit_sign {
+  width:25px;
+  height:25px;
+}
+
+.delete {
+  width:25px;
+  height:25px;
+}
+
+.checked:hover {
+  background-color: green;
+}
+
+#checked {
+  width:25px;
+  height:25px;
+}
+
+.edit_sign:hover {
+  background-color: lightblue;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.task_element {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 
-
-
-.input_button {
-  width: 15px;
-  height: 15px;;
-}
+//.input_button {
+ // width: 15px;
+ // height: 15px;;
+//}
 
 #task_element_child {
   display: flex;
@@ -64,7 +132,8 @@ body {
 }
 
 #form_multiple_choice {
-  font-size: 50%;
+  font-size: 100%;
+  color: blue;
 }
 
 #checked{
