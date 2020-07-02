@@ -15,8 +15,15 @@
 
   </head>
   <body>
-  <div class="div_new_task">
+  <header class="header-main">
+  <div>
     <h1>SMART-TODO List</h1>
+  </div>
+  <form class="input_button new-task-button"> 
+    <button type="submit"><b>Create</b> a new task</button>
+  </form>
+  </header>
+  <div class="div_new_task">
     <form id="submit_form" action="/api/list" method="POST">
       <p>Please enter your task here</p>
       <textarea class="form__textarea" name="text" id="description-text" ></textarea>

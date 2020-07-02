@@ -25,6 +25,7 @@ $(document).ready(function() {
         <input type="radio" name="${data.categories[1].type}" value="${$taskDescription}"/> ${data.categories[1].type}
         <input type="radio" name="${data.categories[2].type}" value="${$taskDescription}"/> ${data.categories[2].type}
         <input type="radio" name="${data.categories[3].type}" value="${$taskDescription}"/> ${data.categories[3].type}
+        <input type="radio" name="${data.categories[4].type}" value="${$taskDescription}"/> ${data.categories[4].type}
         <input type="image" name="checked" id="checked"   class="checked" src="https://img.icons8.com/fluent/48/000000/checkmark.png"  alt="submit">
         </form>
         `;
@@ -94,5 +95,13 @@ $(document).ready(function() {
     const $form = $("form");
     loadTask();
   });
-
+  $(".new-task-button").on('submit', function(event) {
+    event.preventDefault();
+    if (!$("#submit_form").is(":visible")) {
+      $("#submit_form").slideDown();
+      $(".form__textarea").focus();
+    } else {
+      $("#submit_form").slideUp();
+    }
+  });
 });
