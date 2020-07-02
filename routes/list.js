@@ -18,6 +18,7 @@ module.exports = (db) => {
       .then(data => {
         const list = data.rows;
         res.json({ list });
+        res.redirect('/');
       })
       .catch(err => {
         res
