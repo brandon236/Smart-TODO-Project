@@ -39,7 +39,9 @@ const usersRoutes = require("./routes/users");
 const listRoutes = require("./routes/list");
 const categoriesRoutes = require("./routes/categories");
 const joinRoutes = require("./routes/join");
-const deleteRoutes = require("./routes/deleteRoutes")
+const deleteRoutes = require("./routes/deleteRoutes");
+const editRoutes = require("./routes/editRoutes");
+
 
 
 
@@ -50,6 +52,7 @@ app.use("/api/categories", categoriesRoutes(db));
 app.use("/api/list", listRoutes(db));
 app.use("/api/join", joinRoutes(db));
 app.use("/delete", deleteRoutes(db));
+app.use("/edit", editRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 

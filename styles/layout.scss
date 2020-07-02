@@ -50,17 +50,31 @@ body {
 
 
 
-.task_element{
-  display: flex;
-}
 
 .input_button {
   width: 15px;
   height: 15px;;
 }
 
-.task_element{
-  font-weight: initial;
+#task_element_child {
+  display: flex;
+  flex-direction:row;
   justify-content:space-between;
 
 }
+
+#form_multiple_choice {
+  font-size: 50%;
+}
+
+#checked{
+  width: 15px;
+  height: 15px;
+}
+
+// .task_element{
+//   font-weight: initial;
+//   justify-content:space-between;
+
+
+// }

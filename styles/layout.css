@@ -44,9 +44,14 @@ body textarea {
   height: 15px;
 }
 
-.task_element {
-  font-weight: initial;
+#task_element_child {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+
+#icon {
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=layout.css.map */
