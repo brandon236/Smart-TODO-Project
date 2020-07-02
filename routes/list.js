@@ -1,15 +1,6 @@
-/*
- * All routes for Widgets are defined here
- * Since this file is loaded in server.js into api/widgets,
- *   these routes are mounted onto /widgets
- * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
- */
-
 const express = require('express');
 const router  = express.Router();
 const apiSearch = require('../lib/apiSearch');
-
-
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
@@ -18,6 +9,7 @@ module.exports = (db) => {
       .then(data => {
         const list = data.rows;
         res.json({ list });
+        res.redirect('/');
       })
       .catch(err => {
         res
@@ -27,7 +19,7 @@ module.exports = (db) => {
   });
 
   router.post("/", (req, res) => {
-    apiSearch(db, req.body.text);
+    apiSearch(db, req.body.text, req.session.user_id);
     res.redirect("/");
   });
 
