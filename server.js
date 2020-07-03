@@ -68,6 +68,7 @@ app.use("/logout", logout());
 app.get('/login/:id', (req, res) => {
   req.session.user_id = null;
   req.session.user_id = req.params.id;
+  console.log(req.session.user_id);
   res.redirect('/');
 });
 
@@ -75,7 +76,9 @@ app.get('/login/:id', (req, res) => {
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("index");
+  const templateVars = { userId: req.session.user_id}
+  console.log(`the user is ${req.session.user_id}`);
+  res.render("index", templateVars);
 });
 
 app.listen(PORT, () => {
