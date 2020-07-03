@@ -49,6 +49,7 @@ const joinRoutes = require("./routes/join");
 const deleteRoutes = require("./routes/deleteRoutes");
 const editRoutes = require("./routes/editRoutes");
 const logout = require("./routes/logout");
+const mailRoutes = require("./routes/mailgun");
 
 
 
@@ -63,6 +64,7 @@ app.use("/api/join", joinRoutes(db));
 app.use("/delete", deleteRoutes(db));
 app.use("/edit", editRoutes(db));
 app.use("/logout", logout());
+app.use("/mail", mailRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 app.get('/login/:id', (req, res) => {
