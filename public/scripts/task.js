@@ -29,6 +29,7 @@ $(document).ready(function() {
         </form>
         `;
         $($taskElement).append($multipleChoice);
+        $("#form_multiple_choice").slideDown();
       });
     })
   };
@@ -52,6 +53,7 @@ $(document).ready(function() {
           const $category = $(`
           <p class="p_category" id="${element.type.slice(3)}"> ${element.type} </p>
           `);
+          console.log("this is a text");
           $('#task_article').prepend($category);
         }
 
@@ -91,6 +93,7 @@ $(document).ready(function() {
 
   // this part resposible for getting data from text input
   $("#submit_form").submit(function(event) {
+    //event.preventDefault();
     const $form = $("form");
     loadTask();
   });
@@ -102,5 +105,8 @@ $(document).ready(function() {
     } else {
       $("#submit_form").slideUp();
     }
+  });
+  $(".logout").on('submit', function() {
+    $.ajax('/logout', { method: 'POST' })
   });
 });
