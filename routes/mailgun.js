@@ -53,7 +53,7 @@ module.exports = (db) => {
 
       const data = {
         from: 'SMART-TODO <ghanbari@ualberta.ca>',
-        to: 'ghanbari@ualberta.ca',
+        to: 'brandonmacleod21@gmail.com',
         subject: 'YOUR TASKS',
         html: htmlArray.join(' ')
       };
