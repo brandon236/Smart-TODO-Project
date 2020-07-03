@@ -52,8 +52,8 @@ module.exports = (db) => {
       console.log("email", email)
 
       const data = {
-        from: 'SMART-TODO <ghanbari@ualberta.ca>',
-        to: 'ghanbari@ualberta.ca',
+        from: 'SMART-TODO <pet.ghanbari@gmail.com>',
+        to: 'pet.ghanbari@gmail.com',
         subject: 'YOUR TASKS',
         html: htmlArray.join(' ')
       };
