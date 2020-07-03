@@ -4,8 +4,11 @@ const router  = express.Router();
 module.exports = (db) => {
   router.post("/", (req, res) => {
 
-    const api_key = 'bcf67d56056771e3292c59e9a220a25d-913a5827-cc1166db';
-    const domain = 'sandboxf5630c4b044e4047b0e62cad213a53e7.mailgun.org';
+
+    console.log(" process.env.MAILGUN_API_KEY",  process.env.MAILGUN_API_KEY)
+
+    const api_key = process.env.MAILGUN_API_KEY;
+    const domain = process.env.MAILGUN_DOMAIN;
     const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
     const userName = req.session.user_id;
     const queryString = `
