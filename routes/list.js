@@ -20,7 +20,9 @@ module.exports = (db) => {
 
   router.post("/", (req, res) => {
     apiSearch(db, req.body.text, req.session.user_id)
-    res.redirect("/");
+    .then(() => {
+      res.redirect("/");
+    })
 
   })
 
