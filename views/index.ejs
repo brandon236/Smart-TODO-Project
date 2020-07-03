@@ -22,6 +22,11 @@
   <form class="input_button new-task-button"> 
     <button type="submit"><b>Create</b> a new task</button>
   </form>
+  <% if(userId !== undefined){ %>
+  <label id="current-user">Logged In As: <%= userId %></label>
+  <% } else { %>
+  <label id="current-user">Not Logged In</label>
+  <% } %>
   </header>
   <div class="div_new_task">
     <form id="submit_form" action="/api/list" method="POST">
