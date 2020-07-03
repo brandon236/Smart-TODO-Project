@@ -48,6 +48,8 @@ const categoriesRoutes = require("./routes/categories");
 const joinRoutes = require("./routes/join");
 const deleteRoutes = require("./routes/deleteRoutes");
 const editRoutes = require("./routes/editRoutes");
+const logout = require("./routes/logout");
+
 
 
 
@@ -60,6 +62,7 @@ app.use("/api/list", listRoutes(db));
 app.use("/api/join", joinRoutes(db));
 app.use("/delete", deleteRoutes(db));
 app.use("/edit", editRoutes(db));
+app.use("/logout", logout());
 // Note: mount other resources here, using the same pattern above
 
 app.get('/login/:id', (req, res) => {
@@ -78,3 +81,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+
