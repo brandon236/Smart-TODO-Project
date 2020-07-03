@@ -49,11 +49,11 @@ module.exports = (db) => {
     .then((email) => {
 
 
-      console.log("email", email)
+
 
       const data = {
-        from: 'SMART-TODO <ghanbari@ualberta.ca>',
-        to: 'brandonmacleod21@gmail.com',
+        from: 'SMART-TODO <pet.ghanbari@gmail.com>',
+        to: email,
         subject: 'YOUR TASKS',
         html: htmlArray.join(' ')
       };
