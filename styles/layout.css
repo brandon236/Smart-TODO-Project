@@ -50,3 +50,134 @@
   </div>
   </body>
 </html>
+=======
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Playfair+Display");
+body {
+  background-color: #EEE;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 30px;
+}
+body #submit_form {
+  display: none;
+}
+body #current-user {
+  color: white;
+}
+body h1 {
+  color: #98e9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .new-task-button {
+  display: flex;
+  justify-content: center;
+}
+body .header-main {
+  height: 120px;
+  width: 93vw;
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+}
+body textarea {
+  border-radius: 5px;
+}
+
+.div_new_task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.submitButton {
+  align-self: flex-end;
+}
+
+.form__textarea {
+  width: 300px;
+  height: 30px;
+}
+
+#task_article {
+  margin: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  max-width: 230vh;
+  border: solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.p_category {
+  font-size: x-large;
+  color: darkred;
+}
+
+.task_element {
+  font-size: medium;
+  color: black;
+}
+
+#icon {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.edit_sign {
+  width: 25px;
+  height: 25px;
+}
+
+.delete {
+  width: 25px;
+  height: 25px;
+}
+
+.checked:hover {
+  background-color: green;
+}
+
+#checked {
+  width: 25px;
+  height: 25px;
+}
+
+.edit_sign:hover {
+  background-color: lightblue;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.task_element {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#task_element_child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#form_multiple_choice {
+  font-size: 100%;
+  color: blue;
+}
+
+#checked {
+  width: 15px;
+  height: 15px;
+}
+
+#login_id {
+  font-size: 70%;
+}
+
+/*# sourceMappingURL=layout.css.map */
