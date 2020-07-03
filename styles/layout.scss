@@ -153,12 +153,17 @@ body {
   justify-content: space-between left;
 }
 
-.mail_button{
+.mail_button {
   width: 20px;
   height: 20px;
 }
 
-.mail_button:hover{
+.mail_button:hover {
   width: 25px;
   height: 25px;
+}
+
+#email-message {
+  color: red;
+  display: none;
 }

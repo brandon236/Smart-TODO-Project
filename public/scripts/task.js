@@ -107,4 +107,7 @@ $(document).ready(function() {
   $(".logout").on('submit', function() {
     $.ajax('/logout', { method: 'POST' })
   });
+  $("#send-mail").on('submit', function(event) {
+    $("#email-message").slideDown();
+  });
 });

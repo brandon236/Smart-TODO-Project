@@ -24,7 +24,7 @@
   </form>
   <div id="login_id">
     <div>
-      <form  action="/mail" method="POST">
+      <form  action="/mail" method="POST" id="send-mail">
         <input type="image"  class="mail_button"  src="https://img.icons8.com/ultraviolet/40/000000/email-open.png" alt="Submit">
       </form>
     </div>
@@ -37,7 +37,7 @@
   <label id="current-user">Not Logged In</label>
   <% } %>
   </div>
-
+  <label id="email-message">Email sent</label>
   </header>
   <div class="div_new_task">
     <form id="submit_form" action="/api/list" method="POST">
