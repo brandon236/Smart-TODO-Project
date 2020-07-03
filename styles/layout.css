@@ -1,3 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/task.js"></script>
+
+
+
+  </head>
+  <body>
+  <header class="header-main">
+  <div>
+    <h1>SMART-TODO List</h1>
+  </div>
+  <form class="input_button new-task-button">
+    <button type="submit"><b>Create</b> a new task</button>
+  </form>
+  <div id="login_id">
+    <div>
+      <form  action="/mail" method="POST">
+        <input type="image"  class="mail_button"  src="https://img.icons8.com/ultraviolet/40/000000/email-open.png" alt="Submit">
+      </form>
+    </div>
+    <% if(userId !== undefined){ %>
+      <label id="current-user">User: <%= userId %></label>
+      <% } else { %>
+      <label id="current-user">Not Logged In</label>
+      <% } %>
+  </div>
+
+  </header>
+  <div class="div_new_task">
+    <form id="submit_form" action="/api/list" method="POST">
+      <p>Please enter your task here</p>
+      <textarea class="form__textarea" name="text" id="description-text" ></textarea>
+      <div>
+        <button class="submitButton"  type="submit">Submit</button>
+      </div>
+    </form>
+    <section class="container" id="container">
+      <article id="task_article"></article>
+    </section>
+  </div>
+  </body>
+</html>
+=======
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Playfair+Display");
 body {
   background-color: #EEE;
